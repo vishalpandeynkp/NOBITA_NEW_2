@@ -193,8 +193,8 @@ async def main():
         LOGGER.info(f"🚫 Assistant Error: {e}")
         sys.exit()
     try:
-        await app.join_chat("net_pro_max")
-        await app.join_chat("ai_image_junction")
+        await app.join_chat("NOBITA_SUPPORT")
+        await app.join_chat("NOBITA_BOT_MAKER")
     except Exception:
         pass
     if LOG_GROUP_ID != 0:
@@ -211,7 +211,7 @@ async def main():
     LOGGER.info("✅ PyTgCalls Started.")
     await asyncio.sleep(1)
     LOGGER.info("✅ Sucessfully Hosted Your Bot !!")
-    LOGGER.info("✅ Now Do Visit: @net_pro_max !!")
+    LOGGER.info("✅ Now Do Visit: @ll_NOBITA_BOT_DEVLOPER_ll !!")
     await idle()
 
 
@@ -813,7 +813,7 @@ async def stream_audio_or_video(client, message):
                 ]
             )
             return await aux.edit_text(
-                "**🥀 Give Me Some Query To\nPlay Audio Or Video❗...\n\nℹ️ Examples:\n≽ Audio: `/play siya ram`\n≽ Video: `/vplay siya ram`**",
+                "**🥀 Give Me Some Query To\nPlay Audio Or Video❗...\n\nℹ️ Examples:\n≽ Audio: `/play RADHE RADHE `\n≽ Video: `/vplay RADHE RADHE`**",
                 reply_markup=buttons,
             )
         query = message.text.split(None, 1)[1]
@@ -1181,7 +1181,7 @@ async def stream_end_handler(_, update: Update):
     return await change_stream(chat_id)
 
 
-@bot.on_message(cdx(["repo", "repository"]) & ~pyrofl.bot)
+@bot.on_message(cdx(["repo", "CHAL-BHOSDIK"]) & ~pyrofl.bot)
 async def git_repo_link(client, message):
     if message.sender_chat:
         mention = message.sender_chat.title
@@ -1202,8 +1202,8 @@ With Your ☛ Other Friends.**"""
         [
             [
                 InlineKeyboardButton(
-                    text="🌺 Open Repository Link 🦋",
-                    url="https://github.com/IamDvis/DV-MUSIC-V2",
+                    text="🌺 LUND LELO 🦋",
+                    url="https://files.catbox.moe/inulle.webp",
                 )
             ],
             [
