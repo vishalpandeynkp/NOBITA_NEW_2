@@ -1,11 +1,16 @@
-FROM ubuntu:jammy
-RUN apt-get update -y && apt-get upgrade -y \
-    && apt-get install -y git python3-pip \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-    
-COPY . /app/
-WORKDIR /app/
+FROM python:3.13-bookworm
 
-RUN pip3 install -r requirements.txt --force-reinstall
+RUN apt-get update && \
+    apt-get install -y --no-install-recommends git && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+
+COPY requirements.txt ./
+RUN python3 -m pip install --upgrade pip setuptools wheel && \
+    pip3 install --no-cache-dir -r requirements.txt && \
+    rm -rf ~/.cache/pip
+
+COPY . .
+
 CMD python3 -m DvisMusic
